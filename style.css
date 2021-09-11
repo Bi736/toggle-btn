@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head label .bg{
+    background-color: rgba(0,0,0,.1);
+    height: 650px;
+    width: 100%;
+    z-index: 0;
+    transition: 1s ease-in-out;
+}
+
+.head label input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.head label label{
+    height: 60px;
+    width: 150px;
+    background-color: white;
+    border-radius: 80px;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    cursor: pointer; 
+    transform: rotate(0deg);
+    transition: 1s ease-in-out;
+    z-index: 5;
+    box-shadow: inset 0px 0px 0px 4px black;
+}
+
+.head label .round{
+    position: absolute;
+    top: 31.5%;
+    left: 45.8%;
+    height: 42px;
+    width: 42px;
+    background-color: rgb(206, 204, 204);
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+    transform: rotate(180deg);
+    z-index: 5;
+}
+.head label input{
+   height: 0;
+   width: 0;
+   visibility: hidden;
+}
+
+.head label input:checked + label{
+    transform: rotate(180deg);
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 4px red;
+}
+.head label input:checked ~ .round{
+    transform: rotate(-180deg);
+    position: absolute;
+    top: 31.5%;
+    left: 52.3%;
+    background-color: green;
+}
+.head label input:checked ~ .bg{
+    background-color: green;
+    z-index: 0;
+}
